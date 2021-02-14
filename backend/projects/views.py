@@ -33,8 +33,8 @@ class ProjectsDetailAPI(RetrieveModelMixin, UpdateModelMixin, DestroyModelMixin,
     
     def put(self, request, *args, **kwargs):
         return self.update(request, *args, **kwargs)
-
+    
     def delete(self, request, *args, **kwargs):
         if self.destroy(request, *args, **kwargs).status_code == 204:
-            return Response({'success':'success'})
+            return Response({'success':'success'})  # 정상 작동시 success 출력, 기존엔 아무것도 출력x
 
