@@ -1,31 +1,22 @@
 import React from 'react';
-import { Link, NavLink } from 'react-router-dom';
+import './Navbar.css';
+import { Navbar, Nav } from 'react-bootstrap';
 
 const navbar = () => (
-    <nav className="navbar navbar-expand-lg navbar-light bg-light">
-        <Link className="navbar-brand" to='/'>Bongwon's Portfolio</Link>
-        <button 
-            className="navbar-toggler" 
-            type="button" data-toggle="collapse" 
-            data-target="#navbarNav" 
-            aria-controls="navbarNav" 
-            aria-expanded="false" 
-            aria-label="Toggle navigation"
-        >
-            <span className="navbar-toggler-icon"></span>
-        </button>
-        <div className="collapse navbar-collapse" id="navbarNav">
-            <ul className="navbar-nav">
-                <li className="nav-item active">
-                    <NavLink className="nav-link" exact to='/'>Home <span className="sr-only">(current)</span></NavLink>
-                </li>
-                <li className="nav-item">
-                    <NavLink className="nav-link" exact to='/blog'>Projects</NavLink>
-                </li>
-            </ul>
-        </div>
-    </nav>
-
+  <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" sticky="top">
+    <Navbar.Brand href="#home">Bongwon Suh</Navbar.Brand>
+    <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+    <Navbar.Collapse id="responsive-navbar-nav">
+      <Nav className="mr-auto">
+        <Nav.Link href="#summary">SUMMARY</Nav.Link>
+        <Nav.Link href="#project">PROJECT</Nav.Link>
+        <Nav.Link href="#awards">AWARDS</Nav.Link>
+        <Nav.Link href="#stacks">STACKS</Nav.Link>
+        <Nav.Link href="#education">EDUCATION</Nav.Link>
+        <Nav.Link href="#contact">CONTACT</Nav.Link>
+      </Nav>
+    </Navbar.Collapse>
+  </Navbar>
 );
 
 export default navbar;

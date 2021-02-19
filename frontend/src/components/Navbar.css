@@ -1,0 +1,12 @@
+.navbar {
+  padding-left: 1.875rem;
+  font-weight: 700;
+  font-size: 0.9rem;
+  letter-spacing: 0;
+}
+
+.navbar-collapse {
+  align-items: center;
+  letter-spacing: 0.1em;
+  width: 100%;
+}
