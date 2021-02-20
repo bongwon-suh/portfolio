@@ -9,13 +9,12 @@ const Blog = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const res = await axios.get(`${process.env.REACT_APP_API_URL}/api/projects/list/`);
-                setBlogs(res.data)
-                console.log(res.data)
-            }
-            catch (err) {
-
-            }
+              const res = await axios.get(
+                `${process.env.REACT_APP_API_URL}/api/projects/list/`,
+              );
+              setBlogs(res.data);
+              console.log(res.data);
+            } catch (err) {}
         }
         fetchData();
     }, []);
