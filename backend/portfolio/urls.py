@@ -8,6 +8,7 @@ from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/projects/', include('projects.urls')),
+    path('api/awards/', include('awards.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_URL)
 
 urlpatterns += [re_path(r'^.*', TemplateView.as_view(template_name='index.html'))]
