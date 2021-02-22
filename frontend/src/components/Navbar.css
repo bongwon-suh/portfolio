@@ -1,9 +1,14 @@
 .navbar {
-  background-color: gray;
+  color: black;
+  background-color: rgba(164, 164, 164, 0.712);
   padding-left: 1.875rem;
   font-weight: 700;
   font-size: 0.9rem;
   letter-spacing: 0;
+}
+
+.navbar .navbar-brand {
+  color:black;
 }
 
 .navbar-collapse {
