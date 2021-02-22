@@ -1,9 +1,16 @@
 import React from 'react';
+import './Footer.css'
 
 const Footer = () => (
-    <div className="footer">
-        this is footer
+  <div className="main-footer">
+    <div className="container">
+      <div className="row">
+        <p className="col-sm">
+          &copy;{new Date().getFullYear()} Bongwon All rights reserved
+        </p>
+      </div>
     </div>
+  </div>
 );
 
 export default Footer;
